@@ -17,6 +17,8 @@ model user {
   username  String   @unique
   email     String   @unique
   password  String
+  bio       String?
+  avatar    String?  //이미지의 url을 저장함
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 

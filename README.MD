@@ -5,8 +5,20 @@ Instaclone Backend Built with Prisma and GraphQL.
 
 - [O] create Account
 - [O] See Profile
-- [ ] Login
-- [ ] Edit Profile
+- [O] Login
+- [O] Edit Profile
+- [O] Changing Avatar(Image Upload)
 - [ ] Follow User
 - [ ] Unfollow User
-- [ ] Cahnge Avatar (image upload)
+- [ ] Search Users
+- [ ] See Followers
+- [ ] See Following
+
+## Photos :
+
+- [ ] See Photo
+- [ ] Upload Photo
+- [ ] Edit Photo
+- [ ] Like/Unlike Photo
+
+
