@@ -37,9 +37,15 @@ export default {
                 const user = await client.user.create({
                     data: {username, email, firstName, lastName, password: uglyPassword },
                 });
-                return user;
+                return{
+                    ok:true
+                }
+
             } catch(e) {
-               return e;
+               return{
+                    ok: false,
+                    error: "Can't create account."
+               }
             }
         },
     },

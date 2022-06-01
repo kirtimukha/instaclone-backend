@@ -18,7 +18,9 @@ model user {
   email     String   @unique
   password  String
   bio       String?
-  avatar    String?  //이미지의 url을 저장함
+  avatar    String?
+  followers user[]   @relation("FollowRelation", references: [id])
+  following user[]   @relation("FollowRelation", references: [id])
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
