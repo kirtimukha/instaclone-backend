@@ -4,9 +4,13 @@ export default {
     Query:
     {
         seeProfile:
-        (_, {username}, context, info) =>
+        (_, {username}) =>
         client.user.findUnique({
             where: {username},
+            include: {
+                following: true,
+                followers: true,
+            }
         }),
     }
 };

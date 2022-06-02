@@ -1,13 +1,13 @@
 import client from "../../client";
-import {protectedResolver} from "../users.utils";
+import { protectedResolver } from "../users.utils";
 
 export default {
     Mutation: {
         followUser: protectedResolver(
-            async (_, {username} , { loggedInUser }) => {
+async (_, { username } , { loggedInUser }) => {
                 const ok = await client.user.findUnique(
                     {
-                        where: {username }
+                        where: { username }
                     }
                 );
                 if(!ok ){
@@ -22,8 +22,9 @@ export default {
                 },
                 data: {
                     following: {
-                        connect: {
-                            username
+                        connect: { //user를 다른 user와 연결해주는 기능
+                            username // prisma가 connect할 user 를 검색할 수 있도록 해 준다
+                                     // connect는 unique한 값으로만 연결 할 수 있다
                         }
                     },
                 },
