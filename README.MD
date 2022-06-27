@@ -1,6 +1,8 @@
 #instaclone
 Instaclone Backend Built with Prisma and GraphQL.
 
+### 실행 1.  npm run dev   2.  npx prisma studio 
+
 ## user:
 
 - [O] create Account
@@ -17,8 +19,8 @@ Instaclone Backend Built with Prisma and GraphQL.
 
 ## Photos :
 
-- [ ] Upload Photo
-- [ ] See Photo
+- [O] Upload Photo
+- [O] See Photo
 - [ ] See Hashtags
 - [ ] Search Photo
 - [ ] Like/Unlike Photo
@@ -26,4 +28,11 @@ Instaclone Backend Built with Prisma and GraphQL.
 - [ ] See Photo Likes
 - [ ] See Feed
 
+#Comments :
 
+- [] Comment on Photo
+- []
+- []
+- []
+- []
+- []
