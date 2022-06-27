@@ -38,8 +38,8 @@ export default {
                     },
                 },
             });
-            console.log(exists);
             return Boolean(exists);
         },
+        photos: ({id}) => client.user.findUnique({where : {id} }).photos,
     },
 };
