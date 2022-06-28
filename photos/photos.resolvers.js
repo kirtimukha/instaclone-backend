@@ -6,7 +6,14 @@ export default {
     hashtags: ({ id }) => client.hashtag.findMany({where: {photos: {some: {id,}
                 ,}
             ,}
-    ,}),
+      ,
+    }),
+    // 부모 포토를 가르키는 id임
+    likes: ({ id }) => client.like.count({
+      where: {
+        photoId: id,
+      },
+    }),
   },
     Hashtag: {
       photos: ({id}, {page}, {loggedInUser}) =>{

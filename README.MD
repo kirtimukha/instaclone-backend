@@ -1,7 +1,9 @@
 # Insta clone
+
 - Insta clone Backend Built with Prisma and GraphQL.
 
-### 실행 1.  npm run dev   2.  npx prisma studio 
+### 실행 1. npm run dev 2. npx prisma studio
+
 ### schema.prisma 수정후에는 항상 npm run migrate
 
 ## user:
@@ -24,8 +26,8 @@
 - [O] See Photo
 - [O] See Hashtags
 - [O] Search Photo
-- [O] Like/Unlike Photo ( 6.9강  2:17초) 
-- [ ] Edit Photo
+- [O] Edit Photo
+- [O] Like/Unlike Photo ( 6.9강 2:17초)
 - [ ] See Photo Likes
 - [ ] See Feed
 

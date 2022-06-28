@@ -6,6 +6,7 @@ export default gql`
     user: User!
     file: String!
     caption: String
+    likes:Int!
     hashtags: [Hashtag]
     createdAt: String!
     updatedAt: String!
@@ -17,5 +18,11 @@ export default gql`
     totalPhotos: Int!
     createdAt: String!
     updatedAt: String!
+  }
+  type Like {
+    id: Int!
+    photo: Photo!
+    createdAt: String!
+    updatedAt: String! 
   }
 `;

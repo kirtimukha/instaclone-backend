@@ -33,10 +33,10 @@ model Photo {
   userId    Int
   file      String
   caption   String?
+  likes     Like[]
   hashtags  Hashtag[]
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
-  likes     Like[]
 }
 
 model Hashtag {
@@ -49,10 +49,13 @@ model Hashtag {
 
 model Like {
   id        Int      @id @default(autoincrement())
-  photo     Photo    @relation(fields: [photoId], references: [id])
+  photo     Photo    @relation(fields: [photoId], references: [id]) //prisma only Not DB
   user      User     @relation(fields: [userId], references: [id])
-  photoId   Int
+  photoId   Int //DB에 저장됨
   userId    Int
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  //좋아요하는 사진-유저가 중복되면 DB에 저장시키지 않음. 라이크에 연결되는 두 가지 필드는 모두 유니크 해야 함
+  @@unique([photoId, userId])
 }
