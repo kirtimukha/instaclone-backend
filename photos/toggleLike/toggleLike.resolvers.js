@@ -14,6 +14,7 @@ export default {
                     error: 'Photo not found.'
                 };
             }
+
             const likeWhere = {
                 photoId_userId: {
                     userId: loggedInUser.id,

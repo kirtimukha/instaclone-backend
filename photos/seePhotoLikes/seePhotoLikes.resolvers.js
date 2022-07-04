@@ -12,9 +12,11 @@ export default {
                         },
                     },
                 }, */
-                select: {user: true},
+                select: {
+                    user: true
+                },
             });
             console.log(likes + ':: 라이크 수');
-        }
-    }
+        },
+    },
 }
